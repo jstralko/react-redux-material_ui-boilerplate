@@ -1,34 +1,32 @@
-import React, { PropTypes, Component } from 'react';
-import TodoTextInput from './TodoTextInput';
-
+import React, { Component } from "react";
 import AppBar from 'material-ui/AppBar';
-
-const defaultStyle = {
-  marginLeft: 20
-};
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 
 class Header extends Component {
-  handleSave(text) {
-    if (text.length !== 0) {
-      this.props.addTodo(text);
-    }
+
+  constructor(props) {
+    super(props);
+    this.state = { open: false };
   }
 
   render() {
     return (
-      <header className="header">
-          <AppBar title="React + Redux + Material UI Boilerplate" />
-          <h1 style={defaultStyle} >todos</h1>
-          <TodoTextInput newTodo
-                         onSave={this.handleSave.bind(this)}
-                         placeholder="What needs to be done?" />
-      </header>
+      <div>
+        <header className="header">
+            <AppBar title="DashBoard" onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}/>
+        </header>
+        <Drawer
+          open={this.state.open}
+          docked={false}
+          onRequestChange={(open) => this.setState({open})}
+        >
+          <MenuItem>Menu Item</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+        </Drawer>
+      </div>
     );
   }
 }
-
-Header.propTypes = {
-  addTodo: PropTypes.func.isRequired
-};
 
 export default Header;
