@@ -4,8 +4,13 @@ import FlatButton from 'material-ui/FlatButton';
 
 const CardExample = () => (
   <Card>
-    <CardTitle title="Card title" subtitle="Card subtitle" />
-    <CardText>
+    <CardHeader
+      title="Panel"
+      actAsExpander={true}
+      showExpandableButton={true}
+      style={{backgroundColor:"#dcdcdc"}}
+    />
+  <CardText expandable={true}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
       Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
