@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Checkbox, List } from 'material-ui';
-import CardExample from "./CardExample";
+import Panel from "./Panel";
 
 const defaultStyle = {
   marginTop: 20,
@@ -17,7 +17,7 @@ class MainSection extends Component {
 
     return (
       <section className="main" style={defaultStyle}>
-        <CardExample />
+        <Panel />
       </section>
     );
   }
