@@ -14,7 +14,9 @@ class Header extends Component {
     return (
       <div>
         <header className="header">
-            <AppBar title="DashBoard" onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}/>
+            <AppBar title="DashBoard"
+              onLeftIconButtonTouchTap={() => this.setState({open: !this.state.open})}
+            />
         </header>
         <Drawer
           open={this.state.open}
