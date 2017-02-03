@@ -41,31 +41,30 @@ class Panel extends Component {
     ];
 
     const lineData = [
-    {
-      name: "series1",
-      values: [
-        { x: 0, y: 20 },
-        { x: 1, y: 18 },
-        { x: 3, y: 30 },
-        { x: 4, y: 12 },
-        { x: 5, y: 6 }
-      ],
-      strokeWidth: 3,
-      strokeDashArray: "5,5"
-    },
-    {
-      name: "series2",
-      values: [
-        { x: 0, y: 32 },
-        { x: 1, y: 10 },
-        { x: 2, y: 12 },
-        { x: 3, y: 23 },
-        { x: 4, y: 29 },
-        { x: 5, y: 40 }
-      ]
-    }
-  ];
-
+      {
+        name: "series1",
+        values: [
+          { x: 0, y: 20 },
+          { x: 1, y: 18 },
+          { x: 3, y: 30 },
+          { x: 4, y: 12 },
+          { x: 5, y: 6 }
+        ],
+        strokeWidth: 3,
+        strokeDashArray: "5,5"
+      },
+      {
+        name: "series2",
+        values: [
+          { x: 0, y: 32 },
+          { x: 1, y: 10 },
+          { x: 2, y: 12 },
+          { x: 3, y: 23 },
+          { x: 4, y: 29 },
+          { x: 5, y: 40 }
+        ]
+      }
+    ];
 
     const styles = {
       root: {
@@ -92,10 +91,10 @@ class Panel extends Component {
           showExpandableButton={true}
           style={{backgroundColor:"#dcdcdc"}}
         />
-      <CardMedia expandable={true}>
+        <CardMedia expandable={true}>
 
-        <div style={styles.root}>
-          <GridList style={styles.gridList} cols={3.2} cellHeight={500}>
+          <div style={styles.root}>
+            <GridList style={styles.gridList} cols={3.2} cellHeight={500}>
               <GridTile
                 key={1}
               >
@@ -142,8 +141,8 @@ class Panel extends Component {
                   gridHorizontal={true}
                 />
               </GridTile>
-          </GridList>
-        </div>
+            </GridList>
+          </div>
         </CardMedia>
       </Card>
     );
